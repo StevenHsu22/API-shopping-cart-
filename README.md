@@ -1,11 +1,24 @@
 # 購物車 API 試作專案
 
+### 專案目標
+
+利用 Python Flask 建立購物車 API 串接 MySQL，並規劃 DB 架構，共設計七項 API，並撰寫在 swagger 文件。
+
 ### 資料庫架構
+
+整體架構
+
+![](https://github.com/StevenHsu22/API_shoppingcart/blob/main/Api_picture/DB_schema.png)
+
+主鍵: user.id, product.name, cart.order_id
+外鍵: product.name -> cart.product_name, user.id -> cart.user_id
+
+phpadmin 設定
 
 ![](https://github.com/StevenHsu22/API_shoppingcart/blob/main/Api_picture/sql%E6%9E%B6%E6%A7%8B.png)
 
+### 功能呈現(Postman)
 
-利用 Python Flask 建立購物車 API 串接 MySQL，並規劃 DB 架構，共設計七項 API，並撰寫在 swagger 文件。
 1.設計 Signin API，提供註冊功能。
 2.設計 Login API，執行登入功能，並加入 jwt_token。
 3.使用 GET 取得所有商品資訊。
